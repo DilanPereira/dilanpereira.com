@@ -29,7 +29,7 @@
 
 $pageTitle ??= 'Dilan Pereira';
 $pageDesc  ??= __('metaDesc', 'Dilan Pereira - Computer Engineering Student.');
-$ogTitle   ??= 'Dilan Pereira | Software Engineer';
+$ogTitle   ??= 'Dilan Pereira | ' . __('ogRole', 'Computer Engineering Student');
 $ogDesc    ??= __('ogDesc', 'Explore my journey and projects in software development and infrastructure.');
 $ogType    ??= 'website';
 $noIndex   ??= $isWIP;   // em manutenção, nunca deixar o Google indexar

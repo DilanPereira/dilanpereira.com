@@ -44,7 +44,7 @@ $extraHead = <<<'HTML'
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dilan Pereira",
-      "jobTitle": "Software Engineer",
+      "jobTitle": "Computer Engineering Student",
       "url": "https://dilanpereira.com",
       "sameAs": [
         "https://github.com/DilanPereira",

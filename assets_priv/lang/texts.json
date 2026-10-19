@@ -56,7 +56,7 @@
     "en": "Building <span class=\"text-accent\">software</span> with a strong <span class=\"text-accent\">infrastructure</span> perspective."
   },
   "aboutText1": {
-    "pt": "Olá! Sou o <strong>Dilan Pereira</strong>, estudante de Engenharia Informática focado em explorar todo o espetro curricular do curso. Com especial interesse em programação, redes (com certificação ITN e SRWE do CCNA), IoT e cibersegurança, procuro ligar o desenvolvimento de software à segurança e robustez das infraestruturas.",
+    "pt": "Olá! Sou o <strong>Dilan Pereira</strong>, estudante de Engenharia Informática focado em explorar todo o espetro curricular do curso. Com especial interesse em programação, redes (com formação Cisco CCNA: ITN e SRWE), IoT e cibersegurança, procuro ligar o desenvolvimento de software à segurança e robustez das infraestruturas.",
     "en": "Hello! I'm <strong>Dilan Pereira</strong>, a Computer Engineering student focused on exploring the full spectrum of the field. With a special interest in programming, networking (with CCNA ITN & SRWE modules), IoT, and cybersecurity, I aim to bridge software development with secure and robust infrastructure."
   },
   "aboutText2": {
@@ -198,5 +198,9 @@
   "language": {
     "pt": "Idioma",
     "en": "Language"
+  },
+  "ogRole": {
+    "pt": "Estudante de Engenharia Informática",
+    "en": "Computer Engineering Student"
   }
 }
