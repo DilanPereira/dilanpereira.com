@@ -1,0 +1,148 @@
+[
+  {
+    "ano": {
+      "pt": "2024 - Presente",
+      "en": "2024 - Present"
+    },
+    "link": "https://www.ipcb.pt/estudar/cursos/licenciatura/licenciatura-em-engenharia-informatica/",
+    "titulo": {
+      "pt": "Licenciatura em Engenharia Informática",
+      "en": "Bachelor's Degree in Computer Science and Engineering"
+    },
+    "linkIns": "https://www.ipcb.pt/escolas/tecnologia/",
+    "instituicao": {
+      "pt": "Escola Superior de Tecnologia - UPCB (Universidade Politécnica de Castelo Branco)",
+      "en": "School of Technology - UPCB (Polytechnic University of Castelo Branco)"
+    },
+    "descricao": {
+      "pt": "Foco no desenvolvimento de lógica avançada e arquitetura de sistemas. Consolidação de conhecimentos em Java, Python e C, com especialização em desenvolvimento web utilizando PHP, JSP e JavaScript para soluções dinâmicas e integração de bases de dados.",
+      "en": "Focusing on advanced logic and systems architecture. Gaining hands-on experience in Java, Python, and C, while specializing in full-stack web development (PHP, JSP, JavaScript) with a strong emphasis on database integration and dynamic system solutions."
+    },
+    "relevante": true
+  },
+  {
+    "ano": {
+      "pt": "2023 - 2026 (Períodos Recorrentes)",
+      "en": "2023 - 2026 (Recurring Periods)"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Colaborador de Reposição (Colaboração Recorrente)",
+      "en": "Stock Replenishment Clerk (Recurring Role)"
+    },
+    "linkIns": "",
+    "instituicao": {
+      "pt": "Pingo Doce",
+      "en": "Pingo Doce"
+    },
+    "descricao": {
+      "pt": "Colaboração sazonal e por períodos em regime de polivalência. Gestão de inventário e reposição com foco em eficiência, cumprimento de prazos rigorosos e resiliência em ambientes de grande afluência.",
+      "en": "Seasonal and recurring collaboration. Inventory management and replenishment focused on operational efficiency, tight deadlines, and resilience in high-traffic retail environments."
+    },
+    "relevante": false
+  },{
+    "ano": {
+      "pt": "2022 - 2023",
+      "en": "2022 - 2023"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Remodelação de Interiores",
+      "en": "Interior Remodeling"
+    },
+    "linkIns": "",
+    "instituicao": {
+      "pt": "Construção & Reabilitação",
+      "en": "Construction & Rehabilitation"
+    },
+    "descricao": {
+      "pt": "Desenvolvimento de forte ética de trabalho, resiliência, trabalho de equipa multidisciplinar e estrito cumprimento de normas de segurança e processos.",
+      "en": "Development of a strong work ethic, resilience, multidisciplinary teamwork, and strict adherence to safety regulations and processes."
+    },
+    "relevante": false
+  },
+  {
+    "ano": {
+      "pt": "2022 (3 meses)",
+      "en": "2022 (3 months)"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Assistente de TI & Atendimento ao Cliente",
+      "en": "IT Assistant & Customer Support"
+    },
+    "linkIns": "",
+    "instituicao": {
+      "pt": "Asmendes",
+      "en": "Asmendes"
+    },
+    "descricao": {
+      "pt": "Suporte técnico a utilizadores, diagnóstico de avarias em hardware e software, e gestão de atendimento direto ao cliente para resolução célere de incidentes informáticos.",
+      "en": "Providing technical user support, hardware and software troubleshooting, and managing direct customer service for rapid incident resolution."
+    },
+    "relevante": true
+  },
+  {
+    "ano": {
+      "pt": "2021 (3 meses)",
+      "en": "2021 (3 months)"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Atendimento & Restauração",
+      "en": "Hospitality & Customer Service"
+    },
+    "linkIns": "",
+    "instituicao": {
+      "pt": "O Barqueiro",
+      "en": "O Barqueiro"
+    },
+    "descricao": {
+      "pt": "Resolução de problemas sob pressão contínua, priorização de pedidos em picos de tráfego e comunicação empática direta com clientes finais.",
+      "en": "Problem-solving under continuous pressure, order prioritization during peak traffic, and direct empathetic communication with end-users."
+    },
+    "relevante": false
+  },
+  {
+    "ano": {
+      "pt": "2021 (2 meses)",
+      "en": "2021 (2 months)"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Técnico de Marketing",
+      "en": "Marketing Technician"
+    },
+    "linkIns": "",
+    "instituicao": {
+      "pt": "Casa Pinhal",
+      "en": "Casa Pinhal"
+    },
+    "descricao": {
+      "pt": "Criação de conteúdos digitais, gestão de presença online e desenvolvimento de estratégias de comunicação para promoção de produtos e envolvimento com o público.",
+      "en": "Creation of digital content, management of online presence, and development of communication strategies for product promotion and audience engagement."
+    },
+    "relevante": false
+  },
+  {
+    "ano": {
+      "pt": "2019 - 2022",
+      "en": "2019 - 2022"
+    },
+    "link": "",
+    "titulo": {
+      "pt": "Curso Profissional Técnico de Multimédia",
+      "en": "Professional Multimedia Technician Course"
+    },
+    "linkIns": "http://aes.ccems.pt/",
+    "instituicao": {
+      "pt": "Agrupamento de Escolas da Sertã",
+      "en": "Sertã Secondary School"
+    },
+    "descricao": {
+      "pt": "Formação especializada em produção visual, design gráfico e experiência do utilizador (UX/UI). Domínio de ferramentas Adobe para edição multimédia, animação 2D/3D e introdução ao desenvolvimento front-end com HTML e CSS.",
+      "en": "Specialized training in visual production, graphic design, and User Experience (UX/UI). Expert use of Adobe tools for multimedia editing, 2D/3D animation, and foundational front-end development with HTML and CSS."
+    },
+    "relevante": true
+  }
+]

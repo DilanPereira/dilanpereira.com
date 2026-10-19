@@ -1,0 +1,721 @@
+/**
+ * style.css — estilos próprios do site (por cima do Bootstrap)
+ *
+ * Índice:
+ *    1. Fontes
+ *    2. Cores do site (variáveis)
+ *    3. Base
+ *    4. Cabeçalho e menu
+ *    5. Secções e títulos
+ *    6. Percurso (linha do tempo)
+ *    7. Links de contacto e formulário
+ *    8. Rodapé e "voltar ao topo"
+ *    9. Itens extra do percurso
+ *   10. Páginas de manutenção e 404
+ */
+
+/* ==========================================================================
+   1. Fontes
+   ========================================================================== */
+/* Inter (alojada no próprio site, sem pedidos à Google) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ==========================================================================
+   2. Cores do site (usadas em todo o CSS com var(--nome))
+   ========================================================================== */
+:root {
+    --bg-color: #fcfaf7;
+    --text-main: #2d2d2d;
+    --text-light: #6b6b6b;          /* 5.1:1 sobre o fundo (antes #757575 = 4.4:1) */
+    --accent: #d4a373;              /* dourado: linhas, bordas, fundos */
+    --accent-text: #a8794b;         /* dourado para títulos grandes (3.7:1) */
+    --accent-text-strong: #966639;  /* dourado para texto pequeno (4.7:1) */
+}
+
+
+/* ==========================================================================
+   3. Base: seleção de texto, barra de scroll, animação de entrada
+   ========================================================================== */
+.text-accent {
+    color: var(--accent-text);
+}
+::selection {
+    background-color: var(--accent);
+    color: white;
+}
+
+
+/* Ao abrir um endereço com "#secção" (ex.: /pt/#contacto depois de enviar o
+   formulário), o browser salta logo para lá, descontando o cabeçalho fixo.
+   Sem "scroll-behavior: smooth" aqui de propósito: com ele, o Chrome mostrava o
+   topo da página e só depois deslizava até ao formulário. O deslizar suave dos
+   links do menu é feito pelo script.js.
+   O Bootstrap liga o "smooth" por omissão (:root), por isso é preciso desligá-lo. */
+:root,
+html {
+    scroll-behavior: auto;
+    scroll-padding-top: 83px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--accent), transparent 50%);
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+*{
+    caret-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-color);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: clip;
+    min-height: 100vh;
+}
+
+
+/* ==========================================================================
+   4. Cabeçalho, menu e seletor de idioma
+   ========================================================================== */
+header {
+    background-color: color-mix(in srgb, var(--bg-color) 75%, transparent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.nav-link, .lang {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: 0.3s;
+
+    --shadow-color: color-mix(in srgb, var(--bg-color), transparent 60%);
+    text-shadow:
+            -1px -1px 0 var(--shadow-color),
+            1px -1px 0 var(--shadow-color),
+            -1px  1px 0 var(--shadow-color),
+            1px  1px 0 var(--shadow-color);
+}
+
+.nav-link:hover { color: var(--text-main); }
+
+/* Secção atual no menu (o script.js põe a classe "active" ao fazer scroll):
+   texto escuro e um pequeno traço dourado por baixo */
+.navbar-nav .nav-link {
+    position: relative;
+}
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.2rem;
+    width: 1.1rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.25s ease;
+}
+.navbar-nav .nav-link.active {
+    color: var(--text-main);
+}
+.navbar-nav .nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.custom-dropdown-btn {
+    color: var(--text-main);
+    border: 1px solid var(--accent);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown-btn:hover,
+.custom-dropdown-btn:focus,
+.show > .custom-dropdown-btn {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.dropdown-menu-custom {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+    margin-top: 10px !important;
+}
+
+.dropdown-menu-custom .dropdown-item {
+    color: var(--text-main);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+    background-color: rgba(212, 163, 115, 0.15);
+    color: var(--text-main);
+}
+
+.dropdown-menu-custom .dropdown-item.active {
+    background-color: var(--accent) !important;
+    color: white !important;
+}
+
+
+
+/* ==========================================================================
+   5. Secções e títulos
+   ========================================================================== */
+section {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--text-main);
+}
+
+hr.soft-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--accent), rgba(0, 0, 0, 0));
+    opacity: 0.3;
+    margin: 3rem 0;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+
+/* Cartões de competências (Backend, Mobile/Web, Data) da secção "Sobre mim".
+   O título encolhe com o ecrã e pode partir a linha a seguir à "/", para
+   "Mobile/Web" nunca sair da caixa em ecrãs estreitos. */
+.skill-card {
+    height: 100%;
+}
+.skill-card h3 {
+    font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+    overflow-wrap: break-word;   /* só parte uma palavra se ela não couber de todo */
+}
+
+/* Em ecrãs muito estreitos (ex.: 280px), palavras longas como o email ou
+   "Desenvolvimento" partem a linha em vez de saírem do ecrã.
+   .min-w-0 deixa um elemento dentro de um "flex" encolher abaixo do tamanho do texto. */
+h1, h2 {
+    overflow-wrap: break-word;
+}
+.contact-link {
+    overflow-wrap: anywhere;   /* o email não tem espaços: pode partir em qualquer ponto */
+}
+.min-w-0 {
+    min-width: 0;
+}
+.rounded-circle[aria-hidden="true"] {
+    flex-shrink: 0;   /* o círculo do ícone nunca fica achatado */
+}
+
+/* ==========================================================================
+   6. Percurso (linha do tempo)
+   ========================================================================== */
+.timeline-container {
+    background-color: var(--bg-color);
+    padding: 2rem;
+}
+
+.timeline-item {
+    border-left: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    left: -6.5px;
+    top: 5px;
+}
+
+.timeline-date {
+    color: var(--accent-text-strong);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.timeline-title {
+    color: var(--text-main);
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.timeline-inst {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.timeline-item:last-child {
+    border-left: 1px solid transparent;
+}
+
+.timeline-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.timeline-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.timeline-link:hover {
+    color: var(--accent-text-strong);
+}
+
+.timeline-link:hover::after {
+    width: 100%;
+}
+
+.timeline-inst .timeline-link {
+    font-weight: 400;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+
+
+/* ==========================================================================
+   7. Links de contacto e formulário
+   ========================================================================== */
+.contact-link {
+    text-decoration: none;
+    color: var(--text-light);
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--text-main);
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--text-main);
+}
+
+textarea {
+    resize: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #f1f1f1;
+    padding-right: 15px;
+}
+
+.visually-hidden-pot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+
+/* ==========================================================================
+   8. Rodapé e botão "voltar ao topo"
+   ========================================================================== */
+.copyright {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.copyright strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-text-strong);
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background-color: var(--text-main);
+    transform: translateY(-5px);
+}
+
+#backToTop svg {
+    margin-bottom: 2px;
+}
+
+
+
+
+/* ==========================================================================
+   9. Itens extra do percurso (escondidos até carregar em "ver percurso completo")
+   ========================================================================== */
+/* O item extra colapsa altura, padding e margens sem usar overflow: hidden para não cortar o ponto */
+.extra-exp-item {
+    max-height: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.extra-exp-item.show-item {
+    max-height: 800px;
+    padding-top: inherit !important;
+    padding-bottom: 3rem !important;
+    margin-bottom: inherit !important;
+}
+
+/* O ponto desvanece suavemente nos itens extra sem se cortar */
+.extra-exp-item .timeline-dot {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.extra-exp-item.show-item .timeline-dot {
+    opacity: 1;
+}
+
+/* O wrapper interno gere o corte do texto em segurança */
+.extra-exp-item .timeline-collapse-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
+}
+
+.extra-exp-item.show-item .timeline-collapse-wrapper {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Estilo mais discreto para os itens extra */
+
+.extra-exp-item .timeline-title {
+    color: #4a4a4a;
+    font-weight: 600 !important;
+}
+
+.extra-exp-item .timeline-collapse-wrapper {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 1.2rem;
+    border-radius: 0.75rem;
+}
+
+.extra-exp-item .badge {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    color: #6c757d !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+    padding: 0.25em 0.6em;
+}
+/* Botão "ver percurso completo" */
+.toggle-percurso-btn:hover,
+.toggle-percurso-btn:focus-visible {
+    color: var(--accent-text-strong) !important;
+}
+
+/* Campos do formulário com erro (os inputs têm border-0) */
+.form-control.is-invalid {
+    border: 1px solid var(--bs-form-invalid-border-color) !important;
+}
+
+
+/* ==========================================================================
+   10. Páginas de manutenção (wip.php) e 404 (404.php)
+   ========================================================================== */
+.wip-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+    background:
+        radial-gradient(60rem 30rem at 50% -10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+        var(--bg-color);
+}
+
+.wip-card {
+    width: 100%;
+    max-width: 34rem;
+    padding: 3rem 2rem;
+    background: #fff;
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px -24px rgba(45, 45, 45, 0.25);
+    animation: wip-in 0.6s ease-out both;
+}
+
+.wip-logo {
+    display: block;
+    height: 36px;
+    width: auto;
+    margin: 0 auto 2rem;
+}
+
+.wip-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.9rem;
+    margin-bottom: 1.25rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    color: #7a512b; /* 5:1 sobre o fundo da etiqueta */
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.wip-status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: wip-pulse 1.8s ease-in-out infinite;
+}
+
+.wip-title {
+    font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+}
+
+.wip-text {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 26rem;
+    margin: 0 auto 2rem;
+}
+
+.wip-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    max-width: 22rem;
+    margin: 0 auto;
+}
+
+/* O email ocupa a linha toda; LinkedIn e GitHub ficam lado a lado */
+.wip-actions .wip-email {
+    grid-column: 1 / -1;
+    overflow-wrap: anywhere;
+}
+
+.wip-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wip-lang {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.wip-lang-link {
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wip-lang-link:hover,
+.wip-lang-link:focus-visible {
+    color: var(--text-main);
+}
+
+.wip-lang-link.is-active {
+    background: var(--text-main);
+    color: var(--bg-color);
+}
+
+@keyframes wip-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes wip-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); }
+    50%      { box-shadow: 0 0 0 6px transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wip-card,
+    .wip-status-dot {
+        animation: none;
+    }
+}

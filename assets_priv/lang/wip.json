@@ -1,0 +1,14 @@
+{
+  "wipStatus": {
+    "pt": "Em manutenção",
+    "en": "Under maintenance"
+  },
+  "wipMainTitle": {
+    "pt": "Estou a fazer algumas melhorias",
+    "en": "I'm making a few improvements"
+  },
+  "wipMainMessage": {
+    "pt": "O site vai estar disponível novamente em breve. Entretanto, podes falar comigo por email ou pelo LinkedIn.",
+    "en": "The site will be back shortly. In the meantime, you can reach me by email or on LinkedIn."
+  }
+}

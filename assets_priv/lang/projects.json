@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "slug": "portfolio",
+    "titulo": {
+      "pt": "Website de Portefólio Pessoal",
+      "en": "Personal Portfolio Website"
+    },
+    "tecnologias": [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "PHP",
+      "JavaScript / ES6",
+      "JSON"
+    ],
+    "descricao": {
+      "pt": "Aplicação web full-stack para apresentação profissional, multilingue, com gestão dinâmica de conteúdos através de ficheiros JSON e design de interface responsivo.",
+      "en": "A full-stack web application for professional showcase, featuring a multilingual architecture with dynamic content management through JSON integration and responsive UI design."
+    },
+    "descDetalhada": {
+      "pt": "Este projeto foi desenvolvido para demonstrar competências full-stack sem a sobrecarga de uma base de dados pesada. Os conteúdos e traduções vivem em ficheiros JSON e um router em PHP serve cada língua no seu próprio endereço (/ e /pt/), com URLs limpos, sitemap e tags hreflang para os motores de busca. O formulário de contacto tem proteção CSRF, limite de envios e notificações em tempo real, e o site usa cabeçalhos de segurança como Content-Security-Policy. A interface foi construída com Bootstrap 5, com foco na responsividade mobile-first, e o site corre num servidor próprio (Raspberry Pi).",
+      "en": "This project was developed to demonstrate full-stack capabilities without the overhead of a heavy database. Content and translations live in JSON files, and a PHP router serves each language at its own address (/ and /pt/), with clean URLs, a sitemap and hreflang tags for search engines. The contact form includes CSRF protection, rate limiting and real-time notifications, and the site sends security headers such as Content-Security-Policy. The UI was built with Bootstrap 5, focusing on mobile-first responsiveness, and the site runs on a self-hosted server (Raspberry Pi)."
+    },
+    "link": "https://dilanpereira.com/",
+    "imagem": "assets/img/projetos/portfolio-2026.webp",
+    "carrossel": []
+  },
+  {
+    "id": 2,
+    "slug": "self-hosted-server",
+    "titulo": {
+      "pt": "Servidor Doméstico Self-Hosted",
+      "en": "Self-Hosted Home Server"
+    },
+    "tecnologias": [
+      "Raspberry Pi 4 (2GB)",
+      "Raspberry Pi OS Lite (64-bit)",
+      "Docker",
+      "Nginx Proxy Manager",
+      "Cloudflare Tunnel",
+      "Tailscale",
+      "Python",
+      "Geekworm X703 UPS (I2C)",
+      "SSD"
+    ],
+    "descricao": {
+      "pt": "Servidor doméstico construído de raiz numa Raspberry Pi 4, sempre ligado, que aloja este portefólio e outros serviços pessoais em contentores Docker, com UPS de hardware para encerramentos seguros em falhas de energia.",
+      "en": "An always-on home server built from scratch on a Raspberry Pi 4, hosting this portfolio and other personal services in Docker containers, with a hardware UPS for graceful shutdowns during power outages."
+    },
+    "descDetalhada": {
+      "pt": "Este servidor aloja o portefólio que está a ver neste momento, entre outros serviços: o ntfy para notificações no telemóvel (incluindo as mensagens do formulário de contacto deste site), o Navidrome como servidor de música pessoal e o HedgeDoc para notas.\n\nCada serviço corre no seu próprio contentor Docker, com a configuração guardada num SSD externo, e todos partilham uma rede interna. O acesso público é feito através de um Cloudflare Tunnel até ao Nginx Proxy Manager, que encaminha cada subdomínio para o serviço certo, sem abrir portas no router. A administração remota é feita por SSH através do Tailscale.\n\nNo hardware, um UPS hat Geekworm X703 (com bateria 18650) comunica por I2C com um script Python personalizado, que monitoriza a bateria e executa um encerramento seguro (graceful shutdown) quando falha a energia. Tudo está montado numa caixa com entradas de ar, que mantém a ventilação passiva para evitar 'thermal throttling' sob carga.",
+      "en": "This server hosts the portfolio you are viewing right now, alongside other services: ntfy for phone notifications (including the messages from this site's contact form), Navidrome as a personal music server and HedgeDoc for notes.\n\nEach service runs in its own Docker container, with its configuration stored on an external SSD, and all of them share an internal network. Public access goes through a Cloudflare Tunnel to Nginx Proxy Manager, which routes each subdomain to the right service without opening any ports on the router. Remote administration is done over SSH through Tailscale.\n\nOn the hardware side, a Geekworm X703 UPS hat (with an 18650 battery) talks over I2C to a custom Python script that monitors the battery and performs a graceful shutdown when the power goes out. Everything is assembled in a case with air vents that keep passive airflow going, to avoid thermal throttling under load."
+    },
+    "link": "placeholder",
+    "imagem": "placeholder",
+    "carrossel": []
+  }
+]
