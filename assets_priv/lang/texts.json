@@ -1,0 +1,206 @@
+{
+  "metaDesc": {
+    "pt": "Dilan Pereira - Estudante de Engenharia Informática.",
+    "en": "Dilan Pereira - Computer Engineering Student."
+  },
+  "ogDesc": {
+    "pt": "Explora o meu percurso e projetos no desenvolvimento de software e infraestruturas.",
+    "en": "Explore my journey and projects in software development and infrastructure."
+  },
+  "headerHome": {
+    "pt": "Início",
+    "en": "Home"
+  },
+  "headerAbout": {
+    "pt": "Sobre",
+    "en": "About"
+  },
+  "headerEducation": {
+    "pt": "Formação & Experiência",
+    "en": "Education & Experience"
+  },
+  "headerProjects": {
+    "pt": "Projetos",
+    "en": "Projects"
+  },
+  "headerContact": {
+    "pt": "Contacto",
+    "en": "Contact"
+  },
+  "heroMainStudy": {
+    "pt": "Estudante de Engenharia Informática",
+    "en": "Computer Engineering Student"
+  },
+  "heroWorkArea": {
+    "pt": "Desenvolvimento de Software e Redes",
+    "en": "Software Development and Networks"
+  },
+  "heroDesc": {
+    "pt": "Exploro todo o espetro curricular da Engenharia Informática, com especial interesse em sistemas inteligentes, arquitetura de redes, segurança e desenvolvimento de software.",
+    "en": "I explore the full spectrum of Computer Engineering, with a special interest in intelligent systems, network architecture, security, and software development."
+  },
+  "heroExp": {
+    "pt": " Formação em Redes (CCNA) e competências em Java, Python, PHP e bases de dados SQL.",
+    "en": " Networking background (CCNA) with skills in Java, Python, PHP, and SQL databases."
+  },
+  "heroMore": {
+    "pt": "Sabe mais sobre mim",
+    "en": "Find out more about me"
+  },
+  "aboutSubTitle": {
+    "pt": "Sobre mim",
+    "en": "About me"
+  },
+  "aboutTitle": {
+    "pt": "A criar <span class=\"text-accent\">software</span> com uma visão rigorosa de <span class=\"text-accent\">infraestrutura</span>.",
+    "en": "Building <span class=\"text-accent\">software</span> with a strong <span class=\"text-accent\">infrastructure</span> perspective."
+  },
+  "aboutText1": {
+    "pt": "Olá! Sou o <strong>Dilan Pereira</strong>, estudante de Engenharia Informática focado em explorar todo o espetro curricular do curso. Com especial interesse em programação, redes (com formação Cisco CCNA: ITN e SRWE), IoT e cibersegurança, procuro ligar o desenvolvimento de software à segurança e robustez das infraestruturas.",
+    "en": "Hello! I'm <strong>Dilan Pereira</strong>, a Computer Engineering student focused on exploring the full spectrum of the field. With a special interest in programming, networking (with CCNA ITN & SRWE modules), IoT, and cybersecurity, I aim to bridge software development with secure and robust infrastructure."
+  },
+  "aboutText2": {
+    "pt": "Ao longo do percurso académico e prático, tenho trabalhado com diversas linguagens de programação e sistemas, consolidando conhecimentos em metodologias de desenvolvimento e boas práticas de engenharia.",
+    "en": "Throughout my academic and practical journey, I have worked with various programming languages and systems, consolidating knowledge in development methodologies and engineering best practices."
+  },
+  "aboutBackground": {
+    "pt": "Explorar Percurso",
+    "en": "View my background"
+  },
+  "eduTitle": {
+    "pt": "Formação & Experiência",
+    "en": "Education & Experience"
+  },
+  "eduComplementary": {
+    "pt": "Experiência Complementar",
+    "en": "Complementary Experience"
+  },
+  "btnShowFull": {
+    "pt": "Ver percurso completo",
+    "en": "View full journey"
+  },
+  "btnHideFull": {
+    "pt": "Ocultar anteriores",
+    "en": "Hide previous"
+  },
+  "projTitle": {
+    "pt": "Projetos em Destaque",
+    "en": "Featured Projects"
+  },
+  "projCheck": {
+    "pt": "Ver projeto",
+    "en": "Check it out"
+  },
+  "contTitle": {
+    "pt": "Entre em contacto",
+    "en": "Get in touch"
+  },
+  "contDesc": {
+    "pt": "Estou sempre aberto a novos projetos, colaborações ou desafios técnicos. Escolhe a via que preferires!",
+    "en": "I'm always open to new projects, collaborations, or technical challenges. Choose whichever way suits you best!"
+  },
+  "contLoc": {
+    "pt": "Localização",
+    "en": "Location"
+  },
+  "contEmail": {
+    "pt": "contacto@dilanpereira.com",
+    "en": "contact@dilanpereira.com"
+  },
+  "contFormName": {
+    "pt": "Nome",
+    "en": "Name"
+  },
+  "contFormNameEx": {
+    "pt": "O teu nome",
+    "en": "Your name"
+  },
+  "contFormEmailEx": {
+    "pt": "exemplo@email.com",
+    "en": "example@email.com"
+  },
+  "contFormSubject": {
+    "pt": "Assunto",
+    "en": "Subject"
+  },
+  "contFormSubjectEx": {
+    "pt": "Em que posso ajudar?",
+    "en": "How can I help?"
+  },
+  "contFormMsg": {
+    "pt": "Mensagem",
+    "en": "Message"
+  },
+  "contFormMsgEx": {
+    "pt": "Escreve aqui a tua mensagem...",
+    "en": "Write your message here..."
+  },
+  "contFormSend": {
+    "pt": "Enviar Mensagem",
+    "en": "Send Message"
+  },
+  "formSuccess": {
+    "pt": "Mensagem enviada com sucesso!",
+    "en": "Message sent successfully!"
+  },
+  "back": {
+    "pt": "Voltar",
+    "en": "Back"
+  },
+  "projDetails": {
+    "pt": "Detalhes do Projeto",
+    "en": "Project Details"
+  },
+  "projMetaDesc": {
+    "pt": "Dilan Pereira - Detalhes do projeto",
+    "en": "Dilan Pereira - Project details"
+  },
+  "backToTop": {
+    "pt": "Voltar ao topo",
+    "en": "Back to top"
+  },
+  "techUsed": {
+    "pt": "Tecnologias utilizadas",
+    "en": "Technologies used"
+  },
+  "formInvalid": {
+    "pt": "Verifica os campos assinalados.",
+    "en": "Please check the highlighted fields."
+  },
+  "formRateLimit": {
+    "pt": "Já enviaste várias mensagens recentemente. Tenta novamente mais tarde.",
+    "en": "You have sent several messages recently. Please try again later."
+  },
+  "formExpired": {
+    "pt": "O formulário expirou. Tenta novamente.",
+    "en": "The form expired. Please try again."
+  },
+  "formError": {
+    "pt": "Ocorreu um erro ao enviar. Envia-me um email diretamente.",
+    "en": "Something went wrong. Please email me directly."
+  },
+  "formPrivacy": {
+    "pt": "Os teus dados só são usados para responder à tua mensagem.",
+    "en": "Your details are only used to reply to your message."
+  },
+  "notFoundTitle": {
+    "pt": "Página não encontrada",
+    "en": "Page not found"
+  },
+  "notFoundText": {
+    "pt": "A página que procuras não existe ou mudou de sítio.",
+    "en": "The page you're looking for doesn't exist or has moved."
+  },
+  "notFoundBack": {
+    "pt": "Voltar à página inicial",
+    "en": "Back to the homepage"
+  },
+  "language": {
+    "pt": "Idioma",
+    "en": "Language"
+  },
+  "ogRole": {
+    "pt": "Estudante de Engenharia Informática",
+    "en": "Computer Engineering Student"
+  }
+}

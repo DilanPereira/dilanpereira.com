@@ -1,0 +1,10 @@
+# Ficheiros sensíveis, dados e logs do servidor
+.env
+assets_priv/logs/
+assets_priv/data/
+assets_priv/php/local_config.php
+.DS_Store
+
+# IDE (JetBrains / VS Code), em qualquer pasta
+**/.idea/
+.vscode/
