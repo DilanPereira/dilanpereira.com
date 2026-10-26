@@ -54,7 +54,7 @@
       "en": "This server hosts the portfolio you are viewing right now, alongside other services: ntfy for phone notifications (including the messages from this site's contact form), Navidrome as a personal music server, HedgeDoc for notes and a webmail (SnappyMail) reachable only through the private Tailscale network.\n\nEach service runs in its own Docker container, with its configuration stored on an external SSD, and all of them share an internal network. Public access goes through a Cloudflare Tunnel to Nginx Proxy Manager, which routes each subdomain to the right service without opening any ports on the router. Remote administration is done over SSH through Tailscale.\n\nOn the hardware side, a Geekworm X703 UPS hat with an 18650 battery keeps the server running when the power goes out. Since this UPS doesn't let the system read the battery level, I wrote a Python service (systemd) that detects outages indirectly: if the router stops responding for 3 minutes, it stops the containers cleanly and flushes everything to disk before the battery runs out; when power returns, it starts them again. Everything is assembled in a case with air vents that keep passive airflow going, to avoid thermal throttling under load."
     },
     "link": "placeholder",
-    "imagem": "placeholder",
+    "imagem": "assets/img/projetos/servidor-2026.webp",
     "carrossel": []
   }
 ]
